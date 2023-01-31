@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - TestMainVerticle</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>TestMainVerticle</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/com.soltia.starter.html">com.soltia.starter</a> &gt; TestMainVerticle</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">0.352s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">verticle_deployed(Vertx, VertxTestContext)</td>
+<td class="success">0.352s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>2023-01-31 14:18:18,979 Test worker DEBUG Apache Log4j Core 2.19.0 initializing configuration XmlConfiguration[location=/Users/nathalieghalayini/Documents/soltia-projects/starter/build/resources/main/log4j2.xml]
+2023-01-31 14:18:18,980 Test worker DEBUG PluginManager 'Core' found 130 plugins
+2023-01-31 14:18:18,981 Test worker DEBUG PluginManager 'Level' found 0 plugins
+2023-01-31 14:18:18,982 Test worker DEBUG PluginManager 'Lookup' found 16 plugins
+2023-01-31 14:18:18,983 Test worker DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2023-01-31 14:18:18,986 Test worker DEBUG PluginManager 'TypeConverter' found 26 plugins
+2023-01-31 14:18:18,989 Test worker DEBUG PatternLayout$Builder(pattern=&quot;%d{HH:mm:ss.SSS} [%t] %highlight{%-5level} %logger{36} - %msg%n&quot;, PatternSelector=null, Configuration(/Users/nathalieghalayini/Documents/soltia-projects/starter/build/resources/main/log4j2.xml), Replace=null, charset=&quot;null&quot;, alwaysWriteExceptions=&quot;null&quot;, disableAnsi=&quot;null&quot;, noConsoleNoAnsi=&quot;null&quot;, header=&quot;null&quot;, footer=&quot;null&quot;)
+2023-01-31 14:18:18,990 Test worker DEBUG PluginManager 'Converter' found 45 plugins
+2023-01-31 14:18:18,991 Test worker DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.ConsoleAppender].
+2023-01-31 14:18:18,993 Test worker DEBUG ConsoleAppender$Builder(target=&quot;SYSTEM_OUT&quot;, follow=&quot;null&quot;, direct=&quot;null&quot;, bufferedIo=&quot;null&quot;, bufferSize=&quot;null&quot;, immediateFlush=&quot;null&quot;, ignoreExceptions=&quot;null&quot;, PatternLayout(%d{HH:mm:ss.SSS} [%t] %highlight{%-5level} %logger{36} - %msg%n), name=&quot;LogToConsole&quot;, Configuration(/Users/nathalieghalayini/Documents/soltia-projects/starter/build/resources/main/log4j2.xml), Filter=null, ={})
+2023-01-31 14:18:18,995 Test worker DEBUG Starting OutputStreamManager SYSTEM_OUT.false.false
+2023-01-31 14:18:18,995 Test worker DEBUG Building Plugin[name=layout, class=org.apache.logging.log4j.core.layout.PatternLayout].
+2023-01-31 14:18:18,995 Test worker DEBUG PatternLayout$Builder(pattern=&quot;%d %p %c{1.} [%t] %m%n&quot;, PatternSelector=null, Configuration(/Users/nathalieghalayini/Documents/soltia-projects/starter/build/resources/main/log4j2.xml), Replace=null, charset=&quot;null&quot;, alwaysWriteExceptions=&quot;null&quot;, disableAnsi=&quot;null&quot;, noConsoleNoAnsi=&quot;null&quot;, header=&quot;null&quot;, footer=&quot;null&quot;)
+2023-01-31 14:18:18,999 Test worker DEBUG Building Plugin[name=TimeBasedTriggeringPolicy, class=org.apache.logging.log4j.core.appender.rolling.TimeBasedTriggeringPolicy].
+2023-01-31 14:18:19,000 Test worker DEBUG TimeBasedTriggeringPolicy$Builder(interval=&quot;null&quot;, modulate=&quot;null&quot;, maxRandomDelay=&quot;null&quot;)
+2023-01-31 14:18:19,000 Test worker DEBUG Building Plugin[name=SizeBasedTriggeringPolicy, class=org.apache.logging.log4j.core.appender.rolling.SizeBasedTriggeringPolicy].
+2023-01-31 14:18:19,002 Test worker DEBUG createPolicy(size=&quot;10 MB&quot;)
+2023-01-31 14:18:19,003 Test worker DEBUG Building Plugin[name=Policies, class=org.apache.logging.log4j.core.appender.rolling.CompositeTriggeringPolicy].
+2023-01-31 14:18:19,003 Test worker DEBUG createPolicy(={TimeBasedTriggeringPolicy(nextRolloverMillis=0, interval=1, modulate=false), SizeBasedTriggeringPolicy(size=10485760)})
+2023-01-31 14:18:19,003 Test worker DEBUG Building Plugin[name=DefaultRolloverStrategy, class=org.apache.logging.log4j.core.appender.rolling.DefaultRolloverStrategy].
+2023-01-31 14:18:19,005 Test worker DEBUG DefaultRolloverStrategy$Builder(max=&quot;10&quot;, min=&quot;null&quot;, fileIndex=&quot;null&quot;, compressionLevel=&quot;null&quot;, ={}, stopCustomActionsOnError=&quot;null&quot;, tempCompressedFilePattern=&quot;null&quot;, Configuration(/Users/nathalieghalayini/Documents/soltia-projects/starter/build/resources/main/log4j2.xml))
+2023-01-31 14:18:19,005 Test worker DEBUG Building Plugin[name=appender, class=org.apache.logging.log4j.core.appender.RollingFileAppender].
+2023-01-31 14:18:19,007 Test worker DEBUG RollingFileAppender$Builder(fileName=&quot;logs/soltia.log&quot;, filePattern=&quot;logs/${date:yyyy-MM}/soltia-%d{MM-dd-yyyy}-%i.log.gz&quot;, append=&quot;null&quot;, locking=&quot;null&quot;, Policies(CompositeTriggeringPolicy(policies=[TimeBasedTriggeringPolicy(nextRolloverMillis=0, interval=1, modulate=false), SizeBasedTriggeringPolicy(size=10485760)])), DefaultRolloverStrategy(DefaultRolloverStrategy(min=1, max=10, useMax=true)), advertise=&quot;null&quot;, advertiseUri=&quot;null&quot;, createOnDemand=&quot;null&quot;, filePermissions=&quot;null&quot;, fileOwner=&quot;null&quot;, fileGroup=&quot;null&quot;, bufferedIo=&quot;null&quot;, bufferSize=&quot;null&quot;, immediateFlush=&quot;null&quot;, ignoreExceptions=&quot;null&quot;, PatternLayout(%d %p %c{1.} [%t] %m%n), name=&quot;LogToRollingFile&quot;, Configuration(/Users/nathalieghalayini/Documents/soltia-projects/starter/build/resources/main/log4j2.xml), Filter=null, ={})
+2023-01-31 14:18:19,009 Test worker DEBUG Returning file creation time for /Users/nathalieghalayini/Documents/soltia-projects/starter/logs/soltia.log
+2023-01-31 14:18:19,009 Test worker DEBUG Starting RollingFileManager logs/soltia.log
+2023-01-31 14:18:19,010 Test worker DEBUG PluginManager 'FileConverter' found 2 plugins
+2023-01-31 14:18:19,011 Test worker DEBUG Setting prev file time to 2023-01-31T11:21:41.000+0100
+2023-01-31 14:18:19,011 Test worker DEBUG Initializing triggering policy CompositeTriggeringPolicy(policies=[TimeBasedTriggeringPolicy(nextRolloverMillis=0, interval=1, modulate=false), SizeBasedTriggeringPolicy(size=10485760)])
+2023-01-31 14:18:19,011 Test worker DEBUG Initializing triggering policy TimeBasedTriggeringPolicy(nextRolloverMillis=0, interval=1, modulate=false)
+2023-01-31 14:18:19,011 Test worker DEBUG Initializing triggering policy SizeBasedTriggeringPolicy(size=10485760)
+2023-01-31 14:18:19,012 Test worker DEBUG Building Plugin[name=appenders, class=org.apache.logging.log4j.core.config.AppendersPlugin].
+2023-01-31 14:18:19,012 Test worker DEBUG createAppenders(={LogToConsole, LogToRollingFile})
+2023-01-31 14:18:19,012 Test worker DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2023-01-31 14:18:19,012 Test worker DEBUG createAppenderRef(ref=&quot;LogToRollingFile&quot;, level=&quot;null&quot;, Filter=null)
+2023-01-31 14:18:19,013 Test worker DEBUG Building Plugin[name=logger, class=org.apache.logging.log4j.core.config.LoggerConfig].
+2023-01-31 14:18:19,014 Test worker DEBUG LoggerConfig$Builder(additivity=&quot;false&quot;, level=&quot;DEBUG&quot;, levelAndRefs=&quot;null&quot;, name=&quot;com.soltia.starter&quot;, includeLocation=&quot;null&quot;, ={LogToRollingFile}, ={}, Configuration(/Users/nathalieghalayini/Documents/soltia-projects/starter/build/resources/main/log4j2.xml), Filter=null)
+2023-01-31 14:18:19,015 Test worker DEBUG Building Plugin[name=AppenderRef, class=org.apache.logging.log4j.core.config.AppenderRef].
+2023-01-31 14:18:19,015 Test worker DEBUG createAppenderRef(ref=&quot;LogToConsole&quot;, level=&quot;null&quot;, Filter=null)
+2023-01-31 14:18:19,015 Test worker DEBUG Building Plugin[name=root, class=org.apache.logging.log4j.core.config.LoggerConfig$RootLogger].
+2023-01-31 14:18:19,016 Test worker DEBUG LoggerConfig$RootLogger$Builder(additivity=&quot;null&quot;, level=&quot;INFO&quot;, levelAndRefs=&quot;null&quot;, includeLocation=&quot;null&quot;, ={LogToConsole}, ={}, Configuration(/Users/nathalieghalayini/Documents/soltia-projects/starter/build/resources/main/log4j2.xml), Filter=null)
+2023-01-31 14:18:19,016 Test worker DEBUG Building Plugin[name=loggers, class=org.apache.logging.log4j.core.config.LoggersPlugin].
+2023-01-31 14:18:19,017 Test worker DEBUG createLoggers(={com.soltia.starter, root})
+2023-01-31 14:18:19,017 Test worker DEBUG Configuration XmlConfiguration[location=/Users/nathalieghalayini/Documents/soltia-projects/starter/build/resources/main/log4j2.xml] initialized
+2023-01-31 14:18:19,017 Test worker DEBUG Starting configuration XmlConfiguration[location=/Users/nathalieghalayini/Documents/soltia-projects/starter/build/resources/main/log4j2.xml]
+2023-01-31 14:18:19,017 Test worker DEBUG Started configuration XmlConfiguration[location=/Users/nathalieghalayini/Documents/soltia-projects/starter/build/resources/main/log4j2.xml] OK.
+2023-01-31 14:18:19,018 Test worker DEBUG Shutting down OutputStreamManager SYSTEM_OUT.false.false-1
+2023-01-31 14:18:19,018 Test worker DEBUG OutputStream closed
+2023-01-31 14:18:19,018 Test worker DEBUG Shut down OutputStreamManager SYSTEM_OUT.false.false-1, all resources released: true
+2023-01-31 14:18:19,018 Test worker DEBUG Appender DefaultConsole-1 stopped with status true
+2023-01-31 14:18:19,018 Test worker DEBUG Stopped org.apache.logging.log4j.core.config.DefaultConfiguration@f316aeb OK
+2023-01-31 14:18:19,045 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5ffd2b27
+2023-01-31 14:18:19,046 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5ffd2b27,component=StatusLogger
+2023-01-31 14:18:19,046 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5ffd2b27,component=ContextSelector
+2023-01-31 14:18:19,047 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5ffd2b27,component=Loggers,name=
+2023-01-31 14:18:19,047 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5ffd2b27,component=Loggers,name=com.soltia.starter
+2023-01-31 14:18:19,048 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5ffd2b27,component=Appenders,name=LogToConsole
+2023-01-31 14:18:19,048 Test worker DEBUG Registering MBean org.apache.logging.log4j2:type=5ffd2b27,component=Appenders,name=LogToRollingFile
+2023-01-31 14:18:19,049 Test worker DEBUG org.apache.logging.log4j.core.util.SystemClock supports precise timestamps.
+2023-01-31 14:18:19,049 Test worker DEBUG Reconfiguration complete for context[name=5ffd2b27] at URI /Users/nathalieghalayini/Documents/soltia-projects/starter/build/resources/main/log4j2.xml (org.apache.logging.log4j.core.LoggerContext@6e9319f) with optional ClassLoader: null
+2023-01-31 14:18:19,049 Test worker DEBUG Shutdown hook enabled. Registering a new one.
+2023-01-31 14:18:19,050 Test worker DEBUG LoggerContext[name=5ffd2b27, org.apache.logging.log4j.core.LoggerContext@6e9319f] started OK.
+14:18:19.130 [Test worker] ?[1;31mERROR?[m io.netty.resolver.dns.DnsServerAddressStreamProviders - Unable to load io.netty.resolver.dns.macos.MacOSDnsServerAddressStreamProvider, fallback to system defaults. This may result in incorrect DNS resolutions on MacOS. Check whether you have a dependency on 'io.netty:netty-resolver-dns-native-macos'. Use DEBUG level to see the full stack: java.lang.UnsatisfiedLinkError: failed to load the required native library
+HTTP server started on port 8888
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.3.2</a> at 31 Jan 2023, 14:18:19</p>
+</div>
+</div>
+</body>
+</html>
