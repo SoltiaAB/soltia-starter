@@ -1,6 +1,7 @@
 package com.soltia.starter;
 
 import io.vertx.core.AbstractVerticle;
+import io.vertx.core.DeploymentOptions;
 import io.vertx.core.Promise;
 import io.vertx.core.Vertx;
 import org.slf4j.Logger;
@@ -10,24 +11,33 @@ public class MainVerticle extends AbstractVerticle {
 
   private final static Logger LOG = LoggerFactory.getLogger(MainVerticle.class);
 
+  public static final int Port = 8888;
+
+
   public static void main(String[] args){
     var vertx = Vertx.vertx();
-    vertx.deployVerticle(new MainVerticle());
+    vertx.exceptionHandler(error -> LOG.error("Unhandled {} ",error));
+    vertx.deployVerticle(new MainVerticle())
+      .onFailure(err -> LOG.error("Unhandled {} with err {}",MainVerticle.class.getName(),err))
+      .onComplete(id -> LOG.info("Deployed {} with id {}",MainVerticle.class.getName(), id));
   }
 
   @Override
   public void start(Promise<Void> startPromise) throws Exception {
-    vertx.createHttpServer().requestHandler(req -> {
-      req.response()
-        .putHeader("content-type", "text/plain")
-        .end("Hello from Soltia!");
-    }).listen(8888, http -> {
-      if (http.succeeded()) {
+    vertx.deployVerticle(RestApiVerticle.class.getName(),
+        new DeploymentOptions().setInstances(processors()))
+      .onFailure(err -> {
+        LOG.error("Unhandled {} with err {}",RestApiVerticle.class.getName(),err);
+        startPromise.fail(err);
+      })
+      .onComplete(id -> {
+        LOG.info("Deployed {} with id {}",RestApiVerticle.class.getName(), id);
         startPromise.complete();
-        LOG.debug("HTTP server started on port 8888");
-      } else {
-        startPromise.fail(http.cause());
-      }
-    });
+      });
   }
+
+  private int processors(){
+    return Math.max(1, Runtime.getRuntime().availableProcessors()/2);
+  }
+
 }
