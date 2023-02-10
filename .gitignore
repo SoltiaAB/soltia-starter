@@ -58,6 +58,7 @@ local.properties
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 .idea/
+.idea/compiler.xml
 
 # User-specific stuff:
 .idea/**/workspace.xml
@@ -157,7 +158,7 @@ buildNumber.properties
 
 ### Gradle ###
 .gradle
-build/
+build
 /buildTool/
 
 # Ignore Gradle GUI config

@@ -5,26 +5,20 @@ plugins {
   java
   application
   id("com.github.johnrengelman.shadow") version "7.1.2"
-  id("io.spring.dependency-management") version "1.0.11.RELEASE"
 }
 
 group = "com.soltia"
 version = "1.0.0-SNAPSHOT"
 
 repositories {
-  maven {
-    url = uri("https://s01.oss.sonatype.org/content/repositories/snapshots")
-    mavenContent {
-      snapshotsOnly()
-    }
-  }
   mavenCentral()
 }
 
-val vertxVersion = "4.4.0-SNAPSHOT"
+val vertxVersion = "4.3.7"
 val junitJupiterVersion = "5.9.1"
-val nettyDnsProvider = "4.1.87.Final"
-var log4jVersion = "2.19.0"
+val jacksonVersion = "2.14.2"
+val logbackVersion = "1.4.5"
+val lombokVersion = "1.18.26"
 
 val mainVerticleName = "com.soltia.starter.MainVerticle"
 val launcherClassName = "io.vertx.core.Launcher"
@@ -36,22 +30,17 @@ application {
   mainClass.set(launcherClassName)
 }
 
-dependencyManagement {
-  imports {
-    mavenBom ("org.apache.logging.log4j:log4j-bom:$log4jVersion")
-  }
-}
-
 dependencies {
   implementation(platform("io.vertx:vertx-stack-depchain:$vertxVersion"))
-  implementation("io.vertx:vertx-core")
-  implementation("org.apache.logging.log4j:log4j-api")
-  implementation("org.apache.logging.log4j:log4j-core")
-  implementation("org.apache.logging.log4j:log4j-slf4j-impl:$log4jVersion")
+  implementation("io.vertx:vertx-web")
+  implementation ("io.vertx:vertx-web-client")
+  implementation ("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")
+  implementation ("ch.qos.logback:logback-classic:$logbackVersion")
+  testImplementation ("ch.qos.logback:logback-classic:$logbackVersion")
   testImplementation("io.vertx:vertx-junit5")
   testImplementation("org.junit.jupiter:junit-jupiter:$junitJupiterVersion")
-  runtimeOnly("io.netty:netty-resolver-dns-native-macos:$nettyDnsProvider:osx-x86_64")
-}
+  compileOnly ("org.projectlombok:lombok:$lombokVersion")
+  annotationProcessor ("org.projectlombok:lombok:$lombokVersion")}
 
 java {
   sourceCompatibility = JavaVersion.VERSION_11
